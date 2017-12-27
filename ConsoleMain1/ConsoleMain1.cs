@@ -75,7 +75,7 @@ namespace Yle
 
             double temp = 0;
 
-            for (int j = 0; j <= 0; j++)
+            for (int j = 0; j < arvot.GetLength(1); j++)
             {
                 for (int i = 0; i < arvot.GetLength(0); i++)
                 {
@@ -83,52 +83,11 @@ namespace Yle
                 }
 
                 double keskiarvo = temp / 295;
-                Console.WriteLine("AU-sarakkeen arvojen summa: " + temp.ToString());
-                Console.WriteLine("AU-sarakkeen arvojen keskiarvo: " + keskiarvo.ToString());
+                Console.WriteLine((j+1).ToString() + ". sarakkeen arvojen summa: " + temp.ToString());
+                Console.WriteLine((j + 1).ToString() + ". sarakkeen arvojen keskiarvo: " + keskiarvo.ToString());
+
+                temp = 0;
             }
-
-            temp = 0;
-
-            for (int j = 1; j <= 1; j++)
-            {
-                for (int i = 0; i < arvot.GetLength(0); i++)
-                {
-                    temp = temp + arvot[i, j];
-                }
-
-                double keskiarvo = temp / 295;
-                Console.WriteLine("AV-sarakkeen arvojen summa: " + temp.ToString());
-                Console.WriteLine("AV-sarakkeen arvojen keskiarvo: " + keskiarvo.ToString());
-            }
-
-            temp = 0;
-
-            for (int j = 2; j <= 2; j++)
-            {
-                for (int i = 0; i < arvot.GetLength(0); i++)
-                {
-                    temp = temp + arvot[i, j];
-                }
-
-                double keskiarvo = temp / 295;
-                Console.WriteLine("AW-sarakkeen arvojen summa: " + temp.ToString());
-                Console.WriteLine("AW-sarakkeen arvojen keskiarvo: " + keskiarvo.ToString());
-            }
-
-            temp = 0;
-
-            for (int j = 3; j <= 3; j++)
-            {
-                for (int i = 0; i < arvot.GetLength(0); i++)
-                {
-                    temp = temp + arvot[i, j];
-                }
-
-                double keskiarvo = temp / 295;
-                Console.WriteLine("AX-sarakkeen arvojen summa: " + temp.ToString());
-                Console.WriteLine("AX-sarakkeen arvojen keskiarvo: " + keskiarvo.ToString());
-            }
-
         }
     }
 }
